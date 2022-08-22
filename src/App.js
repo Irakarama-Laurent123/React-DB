@@ -40,6 +40,8 @@ function App() {
     setIsLoading(false);
   }, []);
 
+  //Using useEffect for requests
+
   useEffect(() => {
     fetchMovieHandler();
   }, [fetchMovieHandler]);
