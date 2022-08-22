@@ -4,6 +4,7 @@ import MoviesList from "./components/MoviesList";
 import "./App.css";
 
 function App() {
+  // Handling Loading and data states
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -42,6 +43,8 @@ function App() {
   useEffect(() => {
     fetchMovieHandler();
   }, [fetchMovieHandler]);
+
+  //Handling Loading and data states
 
   let content = <p>Found no movies</p>;
 
