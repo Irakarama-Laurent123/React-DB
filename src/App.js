@@ -15,6 +15,7 @@ function App() {
       setError(null);
       const response = await fetch("https://swapi.dev/api/films/");
 
+      //handling http errors
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
@@ -31,6 +32,7 @@ function App() {
       });
       setMovies(transformedMovies);
     } catch (e) {
+      //handling http errors
       setError(e.message);
     }
     setIsLoading(false);
