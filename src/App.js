@@ -13,6 +13,7 @@ function App() {
     try {
       setIsLoading(true);
       setError(null);
+      //Sending a get Request with the Fetch API
       const response = await fetch("https://swapi.dev/api/films/");
 
       //handling http errors
